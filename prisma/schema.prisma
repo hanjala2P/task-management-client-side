@@ -38,8 +38,6 @@ model Task {
 }
 
 
-
-
 enum USER_STATUS {
   active
   blocked
