@@ -4,11 +4,11 @@ A robust and scalable backend application built with **Node.js**, **Express**, *
 
 ## 🚀 Features
 
-* **TypeScript Support:** Written in strict TypeScript for better type safety and developer experience.
-* **Prisma ORM:** Modern database management with MongoDB Atlas and custom logging extensions.
-* **Modular Architecture:** Clean separation of concerns (Modules, Routes, Controllers, Services, and Utilities).
-* **Global Error Handling & Async Wrapper:** Clean controller code using `catchAsync` and centralized error handling with `TErrorSources`.
-* **Standardized API Responses:** Consistent response format using a custom `sendResponse` utility.
+* **TypeScript Support:** Written in strict TypeScript for enhanced type safety.
+* **Prisma ORM:** Modern database management with MongoDB Atlas, complete with custom query-logging extensions.
+* **Modular Architecture:** Clean separation of concerns featuring modules, routes, controllers, services, interfaces, and utilities.
+* **Global Error Handling & Async Wrapper:** Clean, concise controller logic utilizing `catchAsync` and structured error types like `TErrorSources`.
+* **Standardized API Responses:** Consistent JSON response formatting via a custom `sendResponse` utility.
 
 ---
 
@@ -18,15 +18,25 @@ A robust and scalable backend application built with **Node.js**, **Express**, *
 * **Framework:** Express.js
 * **Language:** TypeScript
 * **Database:** MongoDB (via Prisma ORM)
-* **Tooling:** tsx, dotenv, cors, etc.
 
 ---
 
-## ⚙️ Getting Started
+## 📂 Project Structure
 
-Follow these steps to set up and run the project locally on your machine.
-
-### 1. Clone the Repository
-```bash
-git clone <your-repository-url>
-cd <project-folder-name>
+```text
+src/
+├── app.ts
+├── server.ts
+├── interface/
+│   └── error.ts
+├── routes/
+│   └── routes.ts
+├── utils/
+│   ├── catchAsync.ts
+│   ├── sendResponse.ts
+│   └── prisma.ts
+└── modules/
+    └── user/
+        ├── user.route.ts
+        ├── user.controller.ts
+        └── user.service.ts
