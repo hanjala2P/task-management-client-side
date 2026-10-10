@@ -8,4 +8,4 @@ router.get("/",userControllers.getAllUsers);
 router.patch("/:id", userControllers.updateUser)
 router.delete("/:id", userControllers.deleteUser);
 
-export const UserRoutes =router; 
+export const userRoutes =router; 
